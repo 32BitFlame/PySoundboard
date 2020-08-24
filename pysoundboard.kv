@@ -1,28 +1,32 @@
+<SoundboardButton>:
+    text:"btn"
+    background_color: [0.8,0.2,0,1]
+    on_press: print("testing")
+
+<Soundboard>:
+    text: 'item1'
+    size_hint:1,1
+    GridLayout:
+        size_hint: 1,1
+
+        cols:4
+        rows:4
+
+        col_default_width: self.width / 4
+        row_default_height: self.height / 4
+        row_force_default: True
+        col_force_default: True
+
+        SoundboardButton:
+
+        SoundboardButton:
+
+        SoundboardButton:
+
+        SoundboardButton:
+
 WindowTabbedPanel:
     size_hint: 1, 1
     do_default_tab: False
 
-    TabbedPanelItem:
-        text: 'item1'
-        GridLayout:
-            cols_minimum:
-                0:1
-                1:4
-                2:4
-                3:4
-            rows: 4
-
-            Button:
-                text: "test"
-                background_color: [0.8,0.2,0,1]
-                on_press: print("testing")
-
-            Button:
-                text: "test2"
-                background_color: [0.8,0.2,0,1]
-                on_press: print("testing")
-
-            Button:
-                text: "test3"
-                background_color: [0.8,0.2,0,1]
-                on_press: print("testing")
+    Soundboard:
